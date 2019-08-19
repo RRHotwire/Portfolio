@@ -1,6 +1,6 @@
 Project 1, CPSC 131
 
-Template code written in 2016 by Kevin Wortman (kwortman@fullerton.edu)
+Template code written in 2016 by Kevin Wortman
 
 To the extent possible under law, the author(s) have dedicated all
 copyright and related and neighboring rights to this software to the
