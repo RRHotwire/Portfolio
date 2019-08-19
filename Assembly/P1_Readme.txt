@@ -1,0 +1,17 @@
+Description
+Programmer’s Model
+The programmer’s model of the HCS12 shows the current status of the MCU. As the name implies, what is described is a model of the MCU rather than a physical entity. Although the model components physically exist in the MCU, they are only a small part of a complex implementation necessary for the working controller. 
+Motorola Assembly Language
+The symbolic language used to code source programs to be processed by the assembler is called assembly language. The language is a collection of mnemonic symbols representing operations (i.e., machine instruction mnemonics or directives to the assembler), symbolic names, operators, and special symbols. The assembly language provides mnemonic operation codes for all machine instructions in the instruction set.
+Instruction Execution Cycle
+The instruction execution cycle is the sequence of actions taken by the HCS12 to execute a set of instructions. There three steps involved in completing each instruction: fetch, decode, and execute. During the fetch stage, op-codes and operands are loaded from memory to the instruction register. The decode stage interprets each instruction as one predefined CPU action. For many instructions, this decode stage overlaps with the fetch stage: as soon as the op-code is fetched from the memory, it is decoded. Once the necessary op-code and operand are loaded into the instruction register, the MCU moves into the execution stage. During this stage, the decoded instruction is executed.
+Work Item(s)
+Design, implement, and test the following programs.
+1.	Loading and Storing Data
+A detailed description of the programmer’s model can be found in your book on pg. 17. Load a value to each of the accumulators (i.e., registers A and B) and index registers (i.e., registers X and Y) and then store the values from these registers into separate memory locations of your choice. Make sure not to overwrite your code in memory. HINT: use the load and store instructions to do this (e.g., to load to register A use LDAA, and to store from register A to a memory location use STAA). For a list of S12 assembly instructions, see the “HCS12 Instruction Set Reference” on the course website or in Appendix A in the book.
+
+
+2.	Understanding the CCR
+Write code that will: 1) load registers A and B with $FF and $01 respectively (i.e., the LDAA and LDAB instructions) and, 2) add the contents of registers A and B and store the result back into A. Remember, that registers A and B can only hold a byte (8-bits). However, $FF + $01 = $100 which is larger than a byte. Take note of what is in register A and what relevant flags are set in the CCR after execution.
+3.	Instruction Execution Cycle
+During the lecture, we stepped through the execution cycle of instructions LDAA and STAA (see pp. 22-25 in your book). Recall that the op-code and operand are represented in memory by HEX numbers (e.g., LDAA $3000 will show in memory as $B6, $30, and $00). Please use the commands LDAA and STAA to load and store a value of your choice. Then show in your screenshots the machine language op-code and operand of these instructions and where in memory this is stored. Finally, execute and show the relevant registers and memory locations in your screenshots. Take note of how many cycles where needed to fetch, decode, and execute each instruction (i.e., LDAA will take an “x” amount of cycles and STAA will take an “x” amount of cycles). HINT: See the register window in the CW simulator and the “HCS12 instruction set reference” on the course website.
