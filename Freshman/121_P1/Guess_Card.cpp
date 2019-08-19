@@ -1,4 +1,4 @@
-CPSC 121
+CPSC 121 
 Project 1 - Card Guessing Game
 This project is to design a card guessing game. We will use a random number generator to assign the secret card.
 Once this card is assigned the user will be prompted to make a guess. After the user guesses the program will 
