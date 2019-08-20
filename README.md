@@ -1,2 +1,2 @@
 # Portfolio
-Example Repo for projects
+Projects completed over the course of my studies
