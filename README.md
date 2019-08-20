@@ -1,2 +1,2 @@
 # Portfolio
-Repo containing previous work
+Example Repo for projects
