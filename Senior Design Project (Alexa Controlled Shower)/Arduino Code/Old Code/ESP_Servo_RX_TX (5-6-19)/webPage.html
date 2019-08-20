@@ -1,0 +1,24 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Web controlled Servo</title>
+<script src="myjquery.js"></script>
+</head>
+<body>
+<h2> <b> Web Controlled Servo using ESP8266 </b> </h2>
+<h3> Slide to move the Servo </h3>
+<input type="range" min="10" max="170" onmouseup="myservo(this.value)" />
+</body>
+
+<script>
+$.ajaxSetup({timeout:1000});
+function myservo(angle)
+{
+	IPVar = "192.168.1.254";
+	ArduinoData = "http://" + IPVar + ":80";
+	$.get( ArduinoData, { "servo": angle })	;
+	{Connection: close};
+}
+</script>
+</html>
+  
